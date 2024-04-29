@@ -38,6 +38,9 @@ body {
     z-index: 998;
 }
 
+/* ----------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------- */
+
 /* header contents */
 
 header {
@@ -103,6 +106,9 @@ li>a {
     padding-right: 10px;
 }
 
+/* ----------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------- */
+
 /* hero section */
 
 .hero {
@@ -132,9 +138,8 @@ li>a {
     font-size: 4rem;
     opacity: 1;
     font-family: "Open Sans", sans-serif;
+    
 }
-
-.rotate-y {}
 
 .buttons {
     display: flex;
@@ -150,6 +155,9 @@ li>a {
     background-size: contain;
     border-radius: 50%;
 }
+
+/* ----------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------- */
 
 /* About section */
 
@@ -172,17 +180,52 @@ li>a {
     height: 100vh;
     width: 100vw;
     background-color: brown;
+    padding: 30px 80px;
+}
+
+.about-container {
+    background-color: peru;
+    height: 80vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 30px 80px;
+    gap: 50px;
+    padding: 0px 20%;
 }
 
-.about-content {
-    background-color: peru;
-    height: 80vh;
+.about-title {
+    font-family: "Open Sans", sans-serif;
+    font-size: 2.5rem;
 }
+
+.about-description {
+    opacity: 0.6;
+}
+
+.about-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding-bottom: 10%;
+}
+
+.about-info .about-info-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.about-info-card h5 {
+    opacity: 0.6;
+}
+
+/* ----------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------- */
 
 /* section what i do */
 
@@ -206,7 +249,46 @@ li>a {
     height: 100vh;
     width: 100vw;
     background-color: darkslateblue;
+    padding: 30px 80px;
 }
+
+.what-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.what-title{
+    font-size: 2.5rem;
+    font-family: "Open Sans", sans-serif;
+}
+
+.what-skills {
+    display: flex;
+    flex-direction: row;
+    align-tracks: center;
+    justify-content: space-between;
+    gap: 50px;
+    
+}
+
+.what-skills-card {
+    border: 2px solid yellow;
+    border-radius: 20px;
+}
+
+.what-skills-card div {
+    padding: 15px;
+}
+
+.what-skills-card .what-skill-card-description {
+    opacity: 0.6;
+}
+
+/* ----------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------- */
 
 /* section summery */
 
@@ -229,4 +311,96 @@ li>a {
     height: 100vh;
     width: 100vw;
     background-color: antiquewhite;
+    padding: 30px 80px;
+}
+
+.summery-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+
+.summery-container .summery-title {
+    font-size: 2.5rem;
+    font-family: "Open Sans", sans-serif;
+}
+
+.summery-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 100px;
+}
+
+.summery-content-left,
+.summery-content-right {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.summery-content-left-description-card,
+.summery-content-right-description-card {
+    padding: 10px 0px;
+}
+
+.summery-content-left-description-card div,
+.summery-content-right-description-card div {
+    padding: 5px;
+}
+
+/* ----------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------- */
+
+/* footer section */
+
+
+.footer-container {
+    padding: 30px 80px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 150px;
+}
+
+.left-footer,
+.right-footer {
+    width: 50%;
+}
+
+.left-footer div {
+    padding: 10px 0px;
+}
+
+.social-icons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    
+}
+
+.social-icons i {
+    padding-right: 20px;
+}
+
+.right-footer .form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form .input-area {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.input-area input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 20px;
 }
