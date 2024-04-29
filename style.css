@@ -10,12 +10,22 @@
     box-sizing: border-box;
 }
 
+/* body tag */
+
+body {
+    font-family: sans-serif;
+    overflow-x: hidden;
+}
+
+/* Cursor design */
+
 #cursor {
     height: 20px;
     width: 20px;
     background-color: crimson;
     border-radius: 50%;
     position: fixed;
+    z-index: 999;
 }
 
 #cursor-child {
@@ -25,4 +35,198 @@
     background-color: lightseagreen;
     border-radius: 50%;
     position: fixed;
+    z-index: 998;
+}
+
+/* header contents */
+
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 80px;
+    height: 10vh;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    box-shadow: 3px 5px #F97300;
+    background-color: royalblue;
+    margin: 0;
+    color: white;
+    position: sticky;
+    z-index: 990;
+}
+
+
+.navigation {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+nav>ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    gap: 40px;
+}
+
+ul>li {
+    list-style: none;
+    border-top: 0.8px solid;
+    border-top-width: 0%;
+    border-top-color: transparent;
+    padding: 4px 0px;
+}
+
+li>a {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    font-family: "League Spartan", sans-serif;
+    text-transform: uppercase;
+}
+
+.btn-primary {
+    padding: 5px 15px;
+    border-radius: 10px;
+    background-color: #F97300;
+    cursor: pointer;
+    font-family: "League Spartan", sans-serif;
+    border: none;
+}
+
+.btn-primary i {
+    padding-right: 10px;
+}
+
+/* hero section */
+
+.hero {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 80px;
+    gap: 200px;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 50px;
+}
+
+.hero-greeting {
+    font-size: 2rem;
+    opacity: 1;
+    font-family: "Open Sans", sans-serif;
+}
+
+.hero-name {
+    font-size: 4rem;
+    opacity: 1;
+    font-family: "Open Sans", sans-serif;
+}
+
+.rotate-y {}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    gap: 50px;
+}
+
+.hero-image img {
+    height: 600px;
+    width: 412.5px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 50%;
+}
+
+/* About section */
+
+.about-animation {
+    height: 100vh;
+    width: 100vw;
+    background-color: aquamarine;
+}
+
+.about-animation h1 {
+    word-wrap: no-space;
+    font-size: 40vw;
+    text-transform: uppercase;
+    letter-spacing: 5vw;
+    font-family: "Montserrat Alternates", sans-serif;
+    padding: 0px 0px 50px 200px;
+}
+
+.about {
+    height: 100vh;
+    width: 100vw;
+    background-color: brown;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 80px;
+}
+
+.about-content {
+    background-color: peru;
+    height: 80vh;
+}
+
+/* section what i do */
+
+.what-animation {
+    height: 100vh;
+    width: 100vw;
+    background-color: darkgoldenrod;
+}
+
+.what-animation h1 {
+    word-wrap: no-space;
+    font-size: 40vw;
+    text-transform: uppercase;
+    letter-spacing: 5vw;
+    font-family: "Montserrat Alternates", sans-serif;
+    padding: 0px 0px 50px 150px;
+    transform: translateX(-180%);
+}
+
+.what {
+    height: 100vh;
+    width: 100vw;
+    background-color: darkslateblue;
+}
+
+/* section summery */
+
+.summery-animation {
+    height: 100vh;
+    width: 100vw;
+    background-color: deeppink;
+}
+
+.summery-animation h1 {
+    word-wrap: no-space;
+    font-size: 40vw;
+    text-transform: uppercase;
+    letter-spacing: 5vw;
+    font-family: "Montserrat Alternates", sans-serif;
+    padding: 0px 0px 50px 150px;
+}
+
+.summery {
+    height: 100vh;
+    width: 100vw;
+    background-color: antiquewhite;
 }
