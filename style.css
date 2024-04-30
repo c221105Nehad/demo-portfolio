@@ -60,9 +60,11 @@ header {
     padding: 30px 80px;
     height: 10vh;
     margin-top: 100px;
-    border-radius: 50px;
-    box-shadow: 3px 5px #F97300;
-    background-color: royalblue;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    box-shadow: 0px 3px 10px #F97300;
+    background-color: #d0d0d021;
+    backdrop-filter: filter(20px);
     margin: 0;
     position: sticky;
     z-index: 990;
@@ -133,7 +135,7 @@ li>a {
     flex-direction: column;
     align-items: start;
     justify-content: center;
-    gap: 50px;
+    gap: 30px;
 }
 
 .hero-greeting {
@@ -143,7 +145,7 @@ li>a {
 }
 
 .hero-name {
-    font-size: 4rem;
+    font-size: 5rem;
     opacity: 1;
     font-family: "Open Sans", sans-serif;
 
@@ -172,7 +174,8 @@ li>a {
 .about-animation {
     height: 100vh;
     width: 100vw;
-    background-color: aquamarine;
+    background: linear-gradient(to bottom, #050209, rgba(32, 178, 171, 0.507), #050209);
+    margin-top: 10vh;
 }
 
 .about-animation h1 {
@@ -181,15 +184,15 @@ li>a {
     text-transform: uppercase;
     letter-spacing: 5vw;
     font-family: "Montserrat Alternates", sans-serif;
-    padding: 0px 0px 50px 200px;
+    padding: 0px 0px 50px 30vw;
 }
+
 
 .about {
     height: 100vh;
     width: 100vw;
-    background-color: brown;
-    padding: 30px 200px;
-    background-color: #050209;
+    padding: 30px 80px;
+    margin-top: 10vh;
 }
 
 .about-container {
@@ -209,7 +212,9 @@ li>a {
 
 .about-title {
     font-family: "Open Sans", sans-serif;
-    font-size: 2.5rem;
+    font-size: 4rem;
+    border-bottom: 1px solid white;
+    padding: 5px 0px;
 }
 
 .about-description {
@@ -245,7 +250,8 @@ li>a {
 .what-animation {
     height: 100vh;
     width: 100vw;
-    background-color: darkgoldenrod;
+    background: linear-gradient(to bottom, #050209, rgba(220, 20, 60, 0.5), #050209);
+    margin-top: 10vh;
 }
 
 .what-animation h1 {
@@ -261,8 +267,8 @@ li>a {
 .what {
     height: 100vh;
     width: 100vw;
-    background-color: darkslateblue;
     padding: 30px 80px;
+    margin-top: 10vh;
 }
 
 .what-container {
@@ -274,35 +280,49 @@ li>a {
 }
 
 .what-title {
-    font-size: 2.5rem;
+    font-size: 4rem;
     font-family: "Open Sans", sans-serif;
+    
 }
 
 .what-skills {
     display: flex;
     flex-direction: row;
-    align-tracks: center;
+    align-items: center;
     justify-content: space-between;
     gap: 50px;
-
+    position: relative;
 }
 
 .what-skills-card {
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.511);
-    background-color: #050209;
+    box-shadow: 3px 3px 15px darkcyan;
     border-radius: 20px;
 }
 
+
 .what-skills-card div {
     padding: 15px;
+    
 }
 
 .what-skills-card-icon i {
     font-size: 2.5rem;
 }
 
+.what-skills-card-icon .fa-css3 {
+    color: #264de4
+}
+
+.what-skills-card-icon .fa-html5 {
+    color: #e34c26;
+}
+
+.what-skills-card-icon .fa-js {
+    color: yellow;
+}
+
 .what-skills-card-icon .fa-react {
-    color: lightblue;
+    color: lightseagreen;
 }
 
 .what-skills-card .what-skill-card-description {
@@ -317,7 +337,8 @@ li>a {
 .summery-animation {
     height: 100vh;
     width: 100vw;
-    background-color: deeppink;
+    background: linear-gradient(to bottom, #050209, rgba(65, 105, 225, 0.509), #050209);
+    margin-top: 10vh;
 }
 
 .summery-animation h1 {
@@ -333,18 +354,25 @@ li>a {
     height: 100vh;
     width: 100vw;
     padding: 30px 80px;
+    margin-top: 10vh;
 }
 
 .summery-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 50px;
+    gap: 10px;
 }
 
 .summery-container .summery-title {
-    font-size: 2.5rem;
+    font-size: 4rem;
     font-family: "Open Sans", sans-serif;
+}
+
+.summery-title .resume {
+    color: red;
+    /* letter-spacing: 2.5vw; */
+    text-transform: uppercase;
 }
 
 .summery-content {
@@ -363,12 +391,24 @@ li>a {
     background-color: #050209;
     border-radius: 20px;
     padding: 15px;
-    border: 2px solid blue;
+
+    border-bottom: 2px solid whitesmoke;
+}
+
+
+.summery-content-left {
+    border-right: 2px solid whitesmoke;
+}
+
+.summery-content-right {
+    border-left: 2px solid whitesmoke;
+    margin-top: 150px;
 }
 
 .summery-content-left-description-card,
 .summery-content-right-description-card {
     padding: 10px 0px;
+
 }
 
 .summery-content-left-description-card div,
@@ -383,12 +423,12 @@ li>a {
 
 footer {
     background-color: #050209;
-
+    margin-top: 40vh;
 }
 
 
 .footer-container {
-    padding: 30px 80px;
+    padding: 100px 80px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -453,6 +493,10 @@ footer {
     color: #A30C0B;
 }
 
+.right-footer {
+    padding-bottom: 30px;
+}
+
 .right-footer .form {
     display: flex;
     flex-direction: column;
@@ -493,10 +537,27 @@ footer {
     border-radius: 10px;
     color: #D0D0D0;
     cursor: pointer;
+    position: absolute;
+    z-index: 50;
 }
 
 .input-area input[type="button"]:hover {
     background-color: transparent;
     border: 1px solid #A30C0B;
     transition: all 0.2s ease-in-out;
+}
+
+.input-area .effect {
+    position: relative;
+}
+
+.effect .effect-element {
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: none;
+    transform: translateX(-100%);
+    position: absolute;
+    z-index: 49;
 }
