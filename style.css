@@ -10,11 +10,20 @@
     box-sizing: border-box;
 }
 
+color {
+    background-color: #050209;
+    background-color: #F62218;
+    background-color: #28F5F4;
+    color: #F7F9E4;
+}
+
 /* body tag */
 
 body {
     font-family: sans-serif;
     overflow-x: hidden;
+    background-color: #050209;
+    color: #D0D0D0;
 }
 
 /* Cursor design */
@@ -50,12 +59,11 @@ header {
     justify-content: space-between;
     padding: 30px 80px;
     height: 10vh;
-    border-bottom-left-radius: 50px;
-    border-bottom-right-radius: 50px;
+    margin-top: 100px;
+    border-radius: 50px;
     box-shadow: 3px 5px #F97300;
     background-color: royalblue;
     margin: 0;
-    color: white;
     position: sticky;
     z-index: 990;
 }
@@ -94,7 +102,7 @@ li>a {
 }
 
 .btn-primary {
-    padding: 5px 15px;
+    padding: 15px;
     border-radius: 10px;
     background-color: #F97300;
     cursor: pointer;
@@ -138,7 +146,7 @@ li>a {
     font-size: 4rem;
     opacity: 1;
     font-family: "Open Sans", sans-serif;
-    
+
 }
 
 .buttons {
@@ -180,7 +188,8 @@ li>a {
     height: 100vh;
     width: 100vw;
     background-color: brown;
-    padding: 30px 80px;
+    padding: 30px 200px;
+    background-color: #050209;
 }
 
 .about-container {
@@ -192,6 +201,10 @@ li>a {
     align-items: center;
     gap: 50px;
     padding: 0px 20%;
+    background-color: black;
+    border-radius: 50px;
+    margin-top: 5vh;
+    box-shadow: 2px 2px 20px 7px #F7F9E4;
 }
 
 .about-title {
@@ -260,7 +273,7 @@ li>a {
     gap: 50px;
 }
 
-.what-title{
+.what-title {
     font-size: 2.5rem;
     font-family: "Open Sans", sans-serif;
 }
@@ -271,16 +284,25 @@ li>a {
     align-tracks: center;
     justify-content: space-between;
     gap: 50px;
-    
+
 }
 
 .what-skills-card {
-    border: 2px solid yellow;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.511);
+    background-color: #050209;
     border-radius: 20px;
 }
 
 .what-skills-card div {
     padding: 15px;
+}
+
+.what-skills-card-icon i {
+    font-size: 2.5rem;
+}
+
+.what-skills-card-icon .fa-react {
+    color: lightblue;
 }
 
 .what-skills-card .what-skill-card-description {
@@ -310,7 +332,6 @@ li>a {
 .summery {
     height: 100vh;
     width: 100vw;
-    background-color: antiquewhite;
     padding: 30px 80px;
 }
 
@@ -339,6 +360,10 @@ li>a {
     display: flex;
     flex-direction: column;
     gap: 30px;
+    background-color: #050209;
+    border-radius: 20px;
+    padding: 15px;
+    border: 2px solid blue;
 }
 
 .summery-content-left-description-card,
@@ -356,6 +381,11 @@ li>a {
 
 /* footer section */
 
+footer {
+    background-color: #050209;
+
+}
+
 
 .footer-container {
     padding: 30px 80px;
@@ -364,11 +394,41 @@ li>a {
     align-items: center;
     justify-content: space-between;
     gap: 150px;
+    padding-top: 5%;
+    border-top: 3px solid #B72226;
+    border-top-right-radius: 25%;
+    border-top-left-radius: 25%;
+    transform: translateY(0%);
+    opacity: 1;
+    position: relative;
 }
+
+.footer-container::before {
+    content: '';
+    position: absolute;
+    background: url('neon-bulb.jpg');
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0.7;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 19;
+}
+
 
 .left-footer,
 .right-footer {
     width: 50%;
+    position: relative;
+    z-index: 20;
+}
+
+::placeholder {
+    color: #D0D0D0;
+    opacity: 1;
 }
 
 .left-footer div {
@@ -380,17 +440,23 @@ li>a {
     flex-direction: row;
     align-items: center;
     justify-content: start;
-    
+
 }
 
 .social-icons i {
     padding-right: 20px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.social-icons i:hover {
+    color: #A30C0B;
 }
 
 .right-footer .form {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 30px;
 }
 
 .form .input-area {
@@ -399,8 +465,38 @@ li>a {
     gap: 10px;
 }
 
-.input-area input {
+.input-area input,
+.input-area textarea {
     width: 100%;
-    padding: 10px;
+    padding: 20px;
     border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.61);
+    border: none;
+    border-bottom: 1px solid #A30C0B;
+}
+
+.input-area textarea {
+    border: 1px solid #A30C0B;
+}
+
+.input-area input:focus,
+.input-area textarea:focus {
+    outline: none;
+    color: #D0D0D0;
+}
+
+.input-area input[type="button"] {
+    width: 30%;
+    background-color: #A30C0B;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    color: #D0D0D0;
+    cursor: pointer;
+}
+
+.input-area input[type="button"]:hover {
+    background-color: transparent;
+    border: 1px solid #A30C0B;
+    transition: all 0.2s ease-in-out;
 }

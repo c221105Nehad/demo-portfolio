@@ -83,3 +83,51 @@ const overflowXEffect = () => {
 }
 
 // overflowXEffect();
+
+gsap.from ('.about-container', {
+    marginTop: '15vh',
+    scale: 0.9,
+    duration: 1.5,
+    scrollTrigger: '.about-container',
+    transform: 'translateY(30px)',
+    opacity: 0.1
+});
+
+gsap.from ('.footer-container', {
+    transform: 'translateY(100%)',
+    paddingTop: '0%',
+    scrollTrigger: {
+        trigger: 'footer',
+        scroller: 'body',
+        start: 'top 50%',
+        end: 'top 50%',
+        scrub: 2
+    }
+});
+
+
+gsap.from ('.left-section-title', {
+    x: -60,
+    opacity: 0,
+    scrollTrigger: {
+        trigger: 'left-footer',
+        scroller: 'body',
+        start: 'top 40%',
+        end: 'top 50%',
+        scrub: 2
+    }
+});
+
+// gsap.from ('.left-section-title', {
+//     x: -60,
+//     opacity: 0,
+//     scrollTrigger: '.left-section-title'
+// });
+
+
+gsap.from ('.form-title', {
+    y: -70,
+    duration: 1,
+    opacity: 0,
+    scrollTrigger: '.form-title'
+});
