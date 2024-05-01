@@ -31,8 +31,11 @@ body {
 #cursor {
     height: 20px;
     width: 20px;
-    background-color: crimson;
+    background-color: transparent;
+    box-shadow: 1px 1px 10px 5px crimson,
+        inset 1px 1px 7px 2px crimson;
     border-radius: 50%;
+    border: none;
     position: fixed;
     z-index: 999;
 }
@@ -42,6 +45,7 @@ body {
     height: 10px;
     width: 10px;
     background-color: lightseagreen;
+    box-shadow: 1px 1px 7px 3px lightseagreen;
     border-radius: 50%;
     position: fixed;
     z-index: 998;
@@ -59,15 +63,11 @@ header {
     justify-content: space-between;
     padding: 30px 80px;
     height: 10vh;
-    margin-top: 100px;
     border-bottom-left-radius: 50px;
     border-bottom-right-radius: 50px;
     box-shadow: 0px 3px 10px #F97300;
     background-color: #d0d0d021;
     backdrop-filter: filter(20px);
-    margin: 0;
-    position: sticky;
-    z-index: 990;
 }
 
 
@@ -101,6 +101,13 @@ li>a {
     cursor: pointer;
     font-family: "League Spartan", sans-serif;
     text-transform: uppercase;
+    overflow: hidden;
+}
+
+
+.portfolio span,
+.blog span {
+    display: inline-block;
 }
 
 .btn-primary {
@@ -109,7 +116,15 @@ li>a {
     background-color: #F97300;
     cursor: pointer;
     font-family: "League Spartan", sans-serif;
-    border: none;
+    border: 0.5px solid #F97300;
+    transition: all 0.9 ease;
+    font-size: 1rem;
+}
+
+.btn-primary:hover {
+    border: 0.5px solid #F97300;
+    background-color: transparent;
+    color: #D0D0D0;
 }
 
 .btn-primary i {
@@ -158,12 +173,34 @@ li>a {
     gap: 50px;
 }
 
+.hero-image {
+    position: relative;
+}
+
+
+.hero-image .shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    /* background: linear-gradient(to top, #050209, transparent, transparent),
+    linear-gradient(to bottom, #050209, transparent, transparent),
+    linear-gradient(to left, #050209, transparent, transparent),
+    linear-gradient(to right, #050209, transparent, transparent); */
+    background-image: radial-gradient(transparent, #05020982, #050209);
+}
+
 .hero-image img {
     height: 600px;
     width: 412.5px;
+    opacity: 1;
     background-repeat: no-repeat;
     background-size: contain;
+    background-position: center;
     border-radius: 50%;
+    border: 2px solid #050209;
 }
 
 /* ----------------------------------------------------------------------------------- */
@@ -174,7 +211,7 @@ li>a {
 .about-animation {
     height: 100vh;
     width: 100vw;
-    background: linear-gradient(to bottom, #050209, rgba(32, 178, 171, 0.507), #050209);
+    background-image: linear-gradient(to bottom, #050209, rgba(32, 178, 171, 0.507), rgba(32, 178, 171, 0.507), #050209);
     margin-top: 10vh;
 }
 
@@ -184,7 +221,8 @@ li>a {
     text-transform: uppercase;
     letter-spacing: 5vw;
     font-family: "Montserrat Alternates", sans-serif;
-    padding: 0px 0px 50px 30vw;
+    padding: 0px 0px 50px 350px;
+
 }
 
 
@@ -207,7 +245,7 @@ li>a {
     background-color: black;
     border-radius: 50px;
     margin-top: 5vh;
-    box-shadow: 2px 2px 20px 7px #F7F9E4;
+    box-shadow: 2px 2px 15px #F7F9E4;
 }
 
 .about-title {
@@ -260,8 +298,9 @@ li>a {
     text-transform: uppercase;
     letter-spacing: 5vw;
     font-family: "Montserrat Alternates", sans-serif;
-    padding: 0px 0px 50px 150px;
+    padding: 0px 0px 50px 250px;
     transform: translateX(-180%);
+    color: #D0D0D0;
 }
 
 .what {
@@ -282,7 +321,7 @@ li>a {
 .what-title {
     font-size: 4rem;
     font-family: "Open Sans", sans-serif;
-    
+
 }
 
 .what-skills {
@@ -302,7 +341,6 @@ li>a {
 
 .what-skills-card div {
     padding: 15px;
-    
 }
 
 .what-skills-card-icon i {
@@ -347,7 +385,8 @@ li>a {
     text-transform: uppercase;
     letter-spacing: 5vw;
     font-family: "Montserrat Alternates", sans-serif;
-    padding: 0px 0px 50px 150px;
+    padding: 0px 0px 50px 250px;
+    color: #D0D0D0;
 }
 
 .summery {
@@ -428,7 +467,7 @@ footer {
 
 
 .footer-container {
-    padding: 100px 80px;
+    padding: 30px 80px;
     display: flex;
     flex-direction: row;
     align-items: center;
