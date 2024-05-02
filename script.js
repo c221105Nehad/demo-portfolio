@@ -119,29 +119,6 @@ gsap.from('.form-title', {
     scrollTrigger: '.form-title'
 });
 
-let button = document.querySelector('input[type="button"]');
-
-button.addEventListener('mouseover', function () {
-
-    gsap.to('.effect-element', {
-        transform: 'translateX(530%)',
-        backgroundColor: 'white',
-        delay: 0.5,
-        duration: 1,
-        opacity: 1
-    });
-});
-
-button.addEventListener('mouseout', function () {
-
-    gsap.to('.effect-element', {
-        transform: 'translateX(-100%)',
-        backgroundColor: 'white',
-        duration: 1,
-        delay: 0.5,
-        opacity: 0
-    });
-});
 
 gsap.to('.resume', {
     letterSpacing: '3.6vw',
@@ -186,13 +163,17 @@ gsap.from('.what-title', {
 });
 
 gsap.from('.what-skills-card', {
-    transform: 'translateX(200%) rotateY(120deg)',
+    y: 200,
     opacity: 0,
-    duration: 1.5,
+    duration: 1,
     scrollTrigger: '.what-skills-card',
-    stagger: 0.2,
-    delay: 0.2,
-    ease: "bounce.out",
+});
+
+gsap.from('.what-skills-card div', {
+    y: 200,
+    duration: 1,
+    opacity: 0,
+    scrollTrigger: '.what-skills-card',
 });
 
 

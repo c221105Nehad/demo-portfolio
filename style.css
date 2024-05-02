@@ -356,7 +356,6 @@ li>a {
     align-items: center;
     justify-content: space-between;
     gap: 50px;
-    position: relative;
 }
 
 .what-skills-card {
@@ -364,6 +363,7 @@ li>a {
     border-radius: 20px;
     cursor: pointer;
     transition: all 0.7s ease;
+    color: #D0D0D0;
 }
 
 .what-skills-card:hover {
@@ -500,7 +500,7 @@ li>a {
 
 footer {
     background-color: #050209;
-    margin-top: 40vh;
+    margin-top: 30vh;
 }
 
 
@@ -629,5 +629,5 @@ footer {
     background-color: transparent;
     border: 1px solid #A30C0B;
     color: #A30C0B;
-    
+
 }
