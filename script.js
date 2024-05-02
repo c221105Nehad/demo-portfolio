@@ -112,25 +112,6 @@ gsap.from('.footer-container', {
 });
 
 
-// gsap.from('.left-section-title', {
-//     x: -60,
-//     opacity: 0,
-//     scrollTrigger: {
-//         trigger: '.left-footer',
-//         scroller: 'body',
-//         start: 'top 40%',
-//         end: 'top 50%',
-//         scrub: 2
-//     }
-// });
-
-// gsap.from ('.left-section-title', {
-//     x: -60,
-//     opacity: 0,
-//     scrollTrigger: '.left-section-title'
-// });
-
-
 gsap.from('.form-title', {
     y: -70,
     duration: 1,
@@ -140,30 +121,31 @@ gsap.from('.form-title', {
 
 let button = document.querySelector('input[type="button"]');
 
-button.addEventListener('mouseenter', function () {
+button.addEventListener('mouseover', function () {
 
     gsap.to('.effect-element', {
         transform: 'translateX(530%)',
         backgroundColor: 'white',
         delay: 0.5,
-        duration: 1
+        duration: 1,
+        opacity: 1
     });
 });
 
-button.addEventListener('mouseleave', function () {
+button.addEventListener('mouseout', function () {
 
     gsap.to('.effect-element', {
         transform: 'translateX(-100%)',
         backgroundColor: 'white',
         duration: 1,
         delay: 0.5,
+        opacity: 0
     });
 });
 
 gsap.to('.resume', {
-    letterSpacing: '3.3vw',
+    letterSpacing: '3.6vw',
     duration: 0.7,
-    ease: "power1.in",
     scrollTrigger: '.resume'
 });
 
@@ -208,8 +190,8 @@ gsap.from('.what-skills-card', {
     opacity: 0,
     duration: 1.5,
     scrollTrigger: '.what-skills-card',
-    stagger: -0.2,
-    delay: 0.5,
+    stagger: 0.2,
+    delay: 0.2,
     ease: "bounce.out",
 });
 
@@ -288,37 +270,3 @@ const forBlog = () => {
 }
 
 forBlog();
-
-// Array.from(parentUl.children).forEach(function (li) {
-
-//     let anchorTag = document.querySelector('li>a');
-
-//     let anchorText = anchorTag.textContent;
-
-//     let splittedText = anchorText.split('');
-
-//     let clutter = '';
-
-//     splittedText.forEach(function (letter) {
-//         clutter += `<span>${letter}</span>`
-//     })
-
-//     console.log(clutter);
-
-//     anchorTag.innerHTML = clutter;
-
-//     li.addEventListener('mouseover', textEffect (anchorTag));
-
-//     const textEffect = (anchorTag)=> {
-//         gsap.from(anchorTag, {
-//             y: -30,
-//             opacity: 0,
-//             stagger: 0.15
-//         });
-//     }
-
-//     textEffect(anchorTag);
-
-// });
-
-
