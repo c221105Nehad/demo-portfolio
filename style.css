@@ -535,6 +535,10 @@ footer {
     z-index: 19;
 }
 
+.left-section-description {
+    opacity: 0.8;
+}
+
 
 .left-footer,
 .right-footer {
@@ -606,7 +610,7 @@ footer {
     color: #D0D0D0;
 }
 
-.input-area input[type='submit'] {
+.input-area input[type='button'] {
     width: 30%;
     background-color: #A30C0B;
     border: 1px solid #A30C0B;
@@ -618,56 +622,12 @@ footer {
     z-index: 50;
     position: relative;
     overflow: hidden;
-}
-
-/* .input-area input[type="button"]:hover {
-    background-color: transparent;
-    border: 0.5px solid #A30C0B;
     transition: all 0.2s ease-in-out;
-} */
-
-.header_link {
-    grid-column-gap: .625em;
-    grid-row-gap: .625em;
-    color: white;
-    border: 1px solid white;
-    border-radius: 100vw;
-    align-items: center;
-    padding: .625em 1.5em;
-    font-family: "Montserrat Alternates", sans-serif;
-    font-weight: 400;
-    line-height: 1.4;
-    text-decoration: none;
-    display: flex;
 }
 
-.reveal-circle {
-    position: relative;
-    overflow: hidden;
-    margin-bottom: 5vh;
-}
-
-.reveal-circle:hover {
-    color: black;
-    border-color: black;
-}
-
-.reveal-circle::after {
-    pointer-events: none;
-    background-color: white;
-    transform: translateY(5em);
-    content: "";
-    z-index: -1;
-    position: absolute;
-    padding-top: 100%;
-    left: 0%;
-    top: 0%;
-    right: 0%;
-    bottom: auto;
-    border-radius: 100%;
-    transition: all 0.7s ease-in-out;
-}
-
-.reveal-circle:hover::after{
-    transform: translateY(-50em);
+.input-area input[type="button"]:hover {
+    background-color: transparent;
+    border: 1px solid #A30C0B;
+    color: #A30C0B;
+    
 }
